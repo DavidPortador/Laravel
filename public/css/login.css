@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@100;300&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    background-color: #131414;
+    color: white;
+    font-size: calc(0.6em + 0.6vw);
+}
+
+.formulario {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+    display: grid !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-login {
+    position: relative;
+    background-color: #17202a;
+    width: 45vw;
+    height: auto;
+    padding: 3% 7% 3% 7%;
+    box-shadow: 0 0 30px black;
+    border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+}
+
+.icon-logo {
+    filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 10));
+    height: 9rem;
+}
+
+.titulo {
+    font-size: calc(1.2em + 1.2vw) !important;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.inputContainer {
+    position: relative !important;
+    min-height: 4rem;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.input-login,
+.input-login-error {
+    position: absolute;
+    padding: 1em;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 20px 20px 20px 20px;
+    color: white;
+    outline: none;
+    background: none;
+    z-index: 3;
+}
+
+.input-login-error {
+    border: 2px solid red;
+}
+
+.labelformError,
+.labelformErrorAct {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0;
+    color: red;
+    display: flex;
+}
+
+.labelformError {
+    display: none;
+}
+
+.labelform {
+    position: absolute !important;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: #17202a;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.eye {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    z-index: 3;
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+::placeholder {
+    color: transparent;
+}
+
+.submitBtn {
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 2% 2%;
+    border: none;
+    background-color: #46a525;
+    font-weight: bold;
+    color: white;
+    border-radius: 60px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.submitBtn:hover {
+    background-color: green;
+    transform: translateY(-2px);
+}
+
+.input-login:focus+.labelform {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: calc(0.48em + 0.48vw) !important;
+}
+
+.input-login-error:focus+.labelform {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: calc(0.48em + 0.48vw) !important;
+}
+
+.input-login:not(:placeholder-shown)+.labelform {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: calc(0.48em + 0.48vw) !important;
+}
+
+.input-login-error:not(:placeholder-shown)+.labelform {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: calc(0.48em + 0.48vw) !important;
+}
+
+.input-login:focus {
+    border: 2px solid green;
+}
+
+.input-login-error:focus {
+    border: 2px solid red;
+}
+
+a {
+    color: #46a525;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #46a525;
+}
+
+a.cancelBtn:visited {
+    color: white;
+}
+
+a:hover {
+    color: green;
+}
+
+/* SMARTPHONE */
+
+@media screen and (min-width: 0px) and (max-width: 767px) and (min-height: 376px) and (max-height: 915px) {
+    body {
+        font-size: calc(1em + 1vw);
+    }
+
+    .formulario {
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+
+    .form-login {
+        border-radius: 30px 30px 0px 0px;
+        -webkit-border-radius: 30px 30px 0px 0px;
+        -moz-border-radius: 30px 30px 0px 0px;
+        min-height: 72vh;
+        height: auto;
+        width: 100vw;
+    }
+
+    .icon-logo {
+        margin-top: 2%;
+        height: 10rem;
+    }
+
+    .inputContainer {
+        margin-bottom: 5%;
+    }
+
+    .submitBtn {
+        width: 100%;
+    }
+
+    .input-login:focus+.labelform {
+        font-size: calc(0.6em + 0.6vw) !important;
+    }
+
+    .input-login-error:focus+.labelform {
+        font-size: calc(0.6em + 0.6vw) !important;
+    }
+
+    .input-login:not(:placeholder-shown)+.labelform {
+        font-size: calc(0.6em + 0.6vw) !important;
+    }
+
+    .input-login-error:not(:placeholder-shown)+.labelform {
+        font-size: calc(0.6em + 0.6vw) !important;
+    }
+
+    .titulo {
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 767px) and (max-width: 1023px) and (min-height: 915px) and (max-height: 1370px) {
+    body {
+        font-size: calc(1.3em + 1.3vw);
+    }
+
+    .form-login {
+        width: 90vw;
+        height: 60vh;
+    }
+
+    .icon-logo {
+        height: 8rem;
+    }
+}
