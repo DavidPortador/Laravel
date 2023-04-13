@@ -24,7 +24,7 @@
     <!-- Animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Customs Styles -->
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css?v='.rand()) }}">
 </head>
 
 <body>
@@ -32,7 +32,8 @@
         <div class="formulario">
             <img src="https://labmanufactura.net/SCEII/public/assets/logo.png" alt="logo"
                 class="mx-auto d-block mb-3 icon-logo">
-            <form class="form-login" method="" action="">
+            <form class="form-login" method="post" action="{{ route('redireccion.login') }}">
+                @csrf
                 <h3 class="titulo">Iniciar Sesión</h3>
                 <div class="inputContainer">
                     <input name="correo" type="email" class="input-login" id="correo" placeholder="a" required />
@@ -50,7 +51,7 @@
                     </div>
                 </div>
                 <p class="labelformError" id="label_email_error">Usuario o contraseña incorrecta</p>
-                <a href="#exampleErrors">Olvide mi contraseña</a>
+                <a href="">Olvide mi contraseña</a>
                 <input type="submit" class="submitBtn mx-auto" value="Entrar" id="btn_send_request" />
                 <label>¿No tienes una cuenta?</label>
                 <br>
@@ -68,7 +69,7 @@
         </div>
     </div>
     <!-- Customs Scripts -->
-    <script type="text/javascript" src="{{ asset('js/login.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/login.js?v='.rand()) }}"></script>
 </body>
 
 </html>

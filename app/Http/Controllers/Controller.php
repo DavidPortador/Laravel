@@ -29,4 +29,24 @@ class Controller extends BaseController
         }
     }
 
+    public function login(Request $request){
+        echo $request->get("correo");
+        echo $request->get("clave");
+    }
+
+    public function redireccion(){
+        
+    }
+
+    public function logout(){
+        
+    }
+
+
+
+
+    public function usuario(){
+        return view('usuario.home');
+    }
+
 }
