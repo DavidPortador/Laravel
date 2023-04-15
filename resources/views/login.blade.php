@@ -50,7 +50,7 @@
                         <i class="fa-solid fa-eye-slash eye" id="showPassword"></i>
                     </div>
                 </div>
-                <p class="labelformError" id="label_email_error">Usuario o contraseña incorrecta</p>
+                <p class="labelformError" id="label_email_error">{{ Session::get('error'); }}</p>
                 <a href="">Olvide mi contraseña</a>
                 <input type="submit" class="submitBtn mx-auto" value="Entrar" id="btn_send_request" />
                 <label>¿No tienes una cuenta?</label>
@@ -71,5 +71,11 @@
     <!-- Customs Scripts -->
     <script type="text/javascript" src="{{ asset('js/login.js?v='.rand()) }}"></script>
 </body>
+
+@if(session()->exists('error'))
+    <script>
+        showErrors();
+    </script>
+@endif
 
 </html>

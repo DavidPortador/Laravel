@@ -53,7 +53,7 @@ $('#logout').on('click', function () { // # -> Llamada por id
         },
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = "../views/login.html";
+            window.location.href = "/logout";
         }
     })
 });

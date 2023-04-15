@@ -33,9 +33,9 @@
             <a href="#">
                 <img src="https://labmanufactura.net/SCEII/public/assets/logo.png" class="center-block icon-logo" />
                 <div class="user">
-                    Nombre del usuario
+                    {{ $_SESSION["data"]->first_name }}
                     <br>
-                    Apellidos
+                    {{ $_SESSION["data"]->last_name }}
                 </div>
                 <div class="tipouser">
                     Tipo de usuario
@@ -63,7 +63,7 @@
                     <script>
                         if (screen.width < 767) { document.write("<br>"); }
                     </script>
-                    Nombre del usuario
+                    {{ $_SESSION["data"]->first_name }}
                 </div>
             </b>
         </div>
